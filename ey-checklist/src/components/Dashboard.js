@@ -69,7 +69,7 @@ class Dashboard extends Component{
                         height="1" width="2"
                         rotation="0 32 0"
                         position ="-2 1.9 -2.5"
-                        href="/final"
+                        href="/tasks"
                         ></Entity>
 
                         <Entity primitive ="a-image"
