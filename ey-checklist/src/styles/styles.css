@@ -3,3 +3,54 @@ font-family: 'Gruppo', cursive;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Press Start 2P', cursive; */
 
+html, body {
+    margin:0px;
+    height:100%;
+  }
+
+#Login{
+    background-color: black;
+    height: 100vh;
+}
+
+#Login #panel-left {
+    display: flex !important;
+    background-color: #000000;
+}
+#Login #panel-right {
+    display: flex !important;
+    align-items: center;
+    background-color: #000000;
+    
+}
+
+#Login #panel-right form input {
+    background-color: black ;
+    color: #f3f3f3;
+    width: 300px;
+    border: 0;
+    border-bottom: 2px solid #f3f3f3;
+    border-radius: 0;
+    font-weight: 400;
+}
+
+#Login .btn.btn-primary {
+    border: 0 ;
+    border-radius: 50px ;
+    background-color: #505050 !important;
+    padding: 12px 40px !important;
+    color: #fff ;
+    font-weight: 400 !important;
+}
+
+#Login h2{
+    color: #f3f3f3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#Login img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
