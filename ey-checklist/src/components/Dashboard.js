@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 import { Entity, Scene } from 'aframe-react'
 import skyTexture from '../img/dash.jpg'
-import coin from '../img/coin.png'
-import avatar from '../img/avatar.png'
 import rules from '../img/rules.png'
 import t2 from '../img/1.png'
 import t1 from '../img/2.png'
 import check from '../img/check.png'
-import logo from '../img/logo.png'
 import { 
     BrowserRouter as Router, 
     Route, 
@@ -16,12 +13,38 @@ import {
   } from 'react-router-dom';
 import 'aframe'
 import 'aframe-href-component'
+import {db, fs} from '../fire'
+import 'firebase/firestore'
+import 'firebase';
 
 class Dashboard extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            taskId : this.props.match.params.taskID
+        }
+    }
 
+    
+    async componentDidMount(){
+        const taskListRef = fs.collection('sequences').doc(`${this.props.match.params.taskID}`)
+        const doc = await taskListRef.get();
+        if (!doc.exists) {
+        console.log('No such document!');
+        } else {
+        console.log('Document data:', doc.data());
+        }
+        const dataxyz = doc.data()
+        console.log(dataxyz)
+        this.setState({
+            ...this.state,
+            taskLists : dataxyz
+        })
+        console.log(this.state)
+    }
 
     render(){
-
+        console.log(this.state)
         return (
 
             <div className = 'Dashboard'>

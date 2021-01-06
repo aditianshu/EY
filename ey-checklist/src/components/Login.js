@@ -14,7 +14,8 @@ class Login extends Component{
         super(props);
         this.state={
             email : "",
-            password : ""
+            password : "",
+            taskID : ""
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,7 +41,7 @@ class Login extends Component{
 
 
     render(){
-
+        var taskID = "/dash/"+this.state.taskID
         return (
 
             <div className = 'Login' id = "Login">
@@ -72,12 +73,19 @@ class Login extends Component{
                                             onChange = {this.handleChange}
                                             name="password" id="password" placeholder="Password" required></input>
                                         </div>
+                                        <div className="form-group">
+                                            <input 
+                                            type="text" 
+                                            value={this.state.taskID} 
+                                            onChange = {this.handleChange}
+                                            name="taskID" id="TaskID" placeholder="TaskID" required></input>
+                                        </div>
                                         <div className="form-group text-center pt-4">
                                             <button 
                                             type="submit" 
                                             className="btn btn-primary"
                                             
-                                            ><a href="/dash">Start!</a></button>
+                                            ><a href={taskID}>Start!</a></button>
                                         </div>
                                     </form>
                                 </div>
