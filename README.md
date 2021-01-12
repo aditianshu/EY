@@ -32,4 +32,10 @@ npm start
 
 And navigate through the App for the experience.
 
+# Future Roadmap :
 
+- The authentication can be shifted from Firebase to Azure, using Azure's AD B2C for new onboarding of employees. 
+- Rest of the tasks and qizzes added.
+- Make the code production ready
+- Add a virtual assistant, providing hints for on-screen tasks
+- Improvement of the UI
