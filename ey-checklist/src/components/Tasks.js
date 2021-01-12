@@ -28,21 +28,21 @@ class Tasks extends Component{
                         autoplay = "true"
                         > */}
 
-                        {/* <Entity primitive="a-video"
-                        width="30" height="25" 
+                        <Entity primitive="a-video"
+                        width="50" height="35" 
                         rotation="0 145 0"
                         position="-28 10 40"
                         src={vid}
                         autoplay loop muted="true"
                        >
                         
-                        </Entity> */}
+                        </Entity>
 
-                        <a-video src = {vid} 
+                        {/* <a-video src = {vid} 
                         autoplay="true" loop="true" muted="true"
                         width="50" height="35" 
                         rotation="0 145 0"
-                        position="-28 10 40"></a-video>
+                        position="-28 10 40"></a-video> */}
 
                         <Entity rotation="0 145 0">
                             <Entity primitive ="a-camera" position="0 0 0" ></Entity>

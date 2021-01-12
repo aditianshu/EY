@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import { Entity, Scene } from 'aframe-react'
 import skyTexture from '../img/dash.jpg'
 import rules from '../img/rules.png'
-import t2 from '../img/1.png'
-import t1 from '../img/2.png'
+import t1 from '../img/1.png'
+import t2 from '../img/2.png'
+import t3 from '../img/3.png'
+import t4 from '../img/4.png'
+import shop from '../img/shop.png'
+import quiz from '../img/quiz.png'
 import check from '../img/check.png'
 import { 
     BrowserRouter as Router, 
@@ -16,6 +20,7 @@ import 'aframe-href-component'
 import {db, fs} from '../fire'
 import 'firebase/firestore'
 import 'firebase';
+import '../links.json'
 
 class Dashboard extends Component{
     constructor(props){
@@ -81,26 +86,51 @@ class Dashboard extends Component{
 
                         <Entity primitive ="a-image"
                         src = {t1}
-                        height="1" width="2"
+                        height="1" width="1"
                         rotation="0 30 0"
                         position ="-3 2 -2.5"
-                        href="/tasks"
+                        href="/task_1"
                         ></Entity>
 
                         <Entity primitive ="a-image"
                         src = {t2}
-                        height="1" width="2"
+                        height="1" width="1"
                         rotation="0 32 0"
                         position ="-2 1.9 -2.5"
-                        href="/tasks"
+                        href="/task_2"
+                        ></Entity>
+
+
+                        <Entity primitive ="a-image"
+                        src = {t3}
+                        height="1" width="1"
+                        rotation="0 35 0"
+                        position ="-1.2 1.84 -2.5"
+                        href="/task_3"
                         ></Entity>
 
                         <Entity primitive ="a-image"
-                        src = {check}
-                        height="1" width="2"
+                        src = {t4}
+                        height="1" width="1"
+                        rotation="0 32 0"
+                        position ="-2 1.3 -2.5"
+                        href="/task_4"
+                        ></Entity>
+
+                        <Entity primitive ="a-image"
+                        src = {quiz}
+                        height="1" width="1"
+                        rotation="0 30 0"
+                        position ="-2.7 0.8 -2.3"
+                        href="/quiz"
+                        ></Entity>
+
+                        <Entity primitive ="a-image"
+                        src = {shop}
+                        height="1" width="1"
                         rotation="0 35 0"
-                        position ="-1.2 1.84 -2.5"
-                        href="/task_2"
+                        position ="-1.2 1 -2.5"
+                        href="/shop"
                         ></Entity>
 
                         <Entity primitive ="a-camera"

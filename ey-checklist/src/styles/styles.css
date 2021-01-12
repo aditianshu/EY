@@ -54,3 +54,33 @@ html, body {
     margin-right: auto;
 }
 
+
+#Task3{
+    
+        background-color: black;
+        height: 100vh;
+    
+}
+
+#Task3 form{
+ width: fit-content;   
+ margin: auto;
+ padding-top: 2%;
+ padding-bottom: 3%;
+}
+
+#Task3 label{
+    color: #fff;
+}
+#Task3 legend{
+    color: #f3f3f3;
+}
+
+#Task3 p{
+    color: #fff;
+}
+
+#Task3 img{
+    height: 300px;
+    width: 400px;
+}

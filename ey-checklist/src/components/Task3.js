@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Form from "@rjsf/core";
+import '../styles/styles.css'
+import logo from '../img/logo.png'
 
 const schema = {
     title: "Bank Account Details for Salary Provisioning",
@@ -23,9 +25,10 @@ class Task3 extends Component{
 
         return (
 
-            <div className = 'Task3'>
-                <div >
-                <Form schema={schema}
+            <div className = 'Task3' id = "Task3">
+                <div className="form">
+                    <img src = {logo}></img>
+                    <Form schema={schema}
                     onChange={log("changed")}
                     onSubmit={log("submitted")}
                     onError={log("errors")} />
